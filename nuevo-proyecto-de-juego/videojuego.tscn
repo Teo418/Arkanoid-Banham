@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://gufqjpoc6h6x"]
+
+[ext_resource type="Texture2D" uid="uid://dxb2qt38m1hug" path="res://assets/Meadow 1.png" id="1_0r343"]
+
+[node name="Node" type="Node" unique_id=225832330]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1668440802]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0r343")
+
+[node name="Barra" type="CharacterBody2D" parent="." unique_id=1939048594]
+
+[node name="Pelota" type="CharacterBody2D" parent="." unique_id=966220742]
+
+[node name="GameOver" type="CanvasLayer" parent="." unique_id=1809978621]
+
+[node name="ColorRect" type="ColorRect" parent="GameOver" unique_id=1638634286]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="GameOver" unique_id=1452954752]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="GameOver" unique_id=2017398942]
+offset_right = 8.0
+offset_bottom = 8.0
