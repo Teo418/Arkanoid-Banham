@@ -11,7 +11,13 @@ config_version=5
 [application]
 
 config/name="Nuevo Proyecto de Juego"
+run/main_scene="uid://gufqjpoc6h6x"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[display]
+
+window/size/viewport_width=380
+window/size/viewport_height=650
 
 [physics]
 
