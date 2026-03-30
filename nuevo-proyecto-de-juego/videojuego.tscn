@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://gufqjpoc6h6x"]
 
 [ext_resource type="Texture2D" uid="uid://dxb2qt38m1hug" path="res://assets/Meadow 1.png" id="1_0r343"]
+[ext_resource type="Script" uid="uid://bfdtepmd168mc" path="res://pelota.gd" id="2_au4a2"]
+[ext_resource type="PackedScene" uid="uid://dc05wjify651l" path="res://barra.tscn" id="2_s51q8"]
+[ext_resource type="Script" uid="uid://joo3t2lrn00a" path="res://bloque.gd" id="4_0lppb"]
 
 [node name="Node" type="Node" unique_id=225832330]
 
@@ -12,9 +15,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_0r343")
 
-[node name="Barra" type="CharacterBody2D" parent="." unique_id=1939048594]
+[node name="Barra" parent="." unique_id=1242813878 instance=ExtResource("2_s51q8")]
 
 [node name="Pelota" type="CharacterBody2D" parent="." unique_id=966220742]
+script = ExtResource("2_au4a2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pelota" unique_id=629438686]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pelota" unique_id=1250260816]
 
 [node name="GameOver" type="CanvasLayer" parent="." unique_id=1809978621]
 
@@ -29,3 +37,18 @@ offset_bottom = 40.0
 [node name="Button" type="Button" parent="GameOver" unique_id=2017398942]
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1504487216]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1538579686]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D" unique_id=1318854930]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D" unique_id=1257866895]
+
+[node name="Bloque1" type="CharacterBody2D" parent="." unique_id=939790398]
+script = ExtResource("4_0lppb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bloque1" unique_id=1025265262]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloque1" unique_id=2139937113]

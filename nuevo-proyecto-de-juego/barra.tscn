@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dc05wjify651l"]
+
+[ext_resource type="Script" uid="uid://nhyrgleb2kcx" path="res://barra.gd" id="1_mrux4"]
+
+[node name="Barra" type="CharacterBody2D" unique_id=1242813878]
+script = ExtResource("1_mrux4")
