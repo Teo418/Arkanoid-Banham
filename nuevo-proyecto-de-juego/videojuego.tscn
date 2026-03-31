@@ -26,7 +26,6 @@ size = Vector2(38, 16)
 [node name="Node" type="Node" unique_id=225832330]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1668440802]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -38,24 +37,24 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_0r343")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1027963875]
+[node name="Bordes" type="Node2D" parent="." unique_id=1027963875]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=2141744134]
+[node name="Techo" type="StaticBody2D" parent="Bordes" unique_id=2141744134]
 position = Vector2(185, -13)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D" unique_id=900445088]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/Techo" unique_id=900445088]
 shape = SubResource("RectangleShape2D_3fka0")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="Node2D" unique_id=740674696]
+[node name="BordeIzquierda" type="StaticBody2D" parent="Bordes" unique_id=740674696]
 position = Vector2(390, 342)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D5" unique_id=1102648422]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/BordeIzquierda" unique_id=1102648422]
 shape = SubResource("RectangleShape2D_e05pw")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D" unique_id=1257866895]
+[node name="BordeDerecha" type="StaticBody2D" parent="Bordes" unique_id=1257866895]
 position = Vector2(-15, 343)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3" unique_id=1198840742]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordes/BordeDerecha" unique_id=1198840742]
 position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_e05pw")
 

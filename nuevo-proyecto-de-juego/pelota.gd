@@ -1,13 +1,17 @@
 extends CharacterBody2D
 
 const VELOCIDAD_INICIAL = 300.0
-const INCREMENTO_VELOCIDAD = 10.0
-const VELOCIDAD_MAXIMA = 500.0
+const INCREMENTO_VELOCIDAD = 20.0
+const VELOCIDAD_MAXIMA = 600.0
 
 var velocidad := VELOCIDAD_INICIAL
 
 func _ready() -> void:
-	velocity = Vector2(velocidad, -velocidad).normalized() * velocidad
+	pass
+
+func _input(event) -> void:
+	if event.is_action_pressed("start"):
+		velocity = Vector2(velocidad, -velocidad).normalized() * velocidad
 
 func _physics_process(delta: float) -> void:
 	var colision = move_and_collide(velocity * delta)
@@ -24,13 +28,13 @@ func _physics_process(delta: float) -> void:
  
 	if position.y <= 0:
 		velocity.y *= -1
- 
 	if position.y >= pantalla.y:
 		get_tree().call_group("game_manager", "mostrar_game_over")
 
 func _aumentarVelocidad() -> void:
 	velocidad = min(velocidad+INCREMENTO_VELOCIDAD, VELOCIDAD_MAXIMA)
 	velocity = velocity.normalized() * velocidad
+
 func _verificarWin() -> void:
 	var bloquesRestantes = get_tree().get_nodes_in_group("bloques").size()
 	if bloquesRestantes == 0:
